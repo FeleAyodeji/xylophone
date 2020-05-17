@@ -11,10 +11,10 @@ class XylophoneApp extends StatelessWidget {
     player.play("note$soundNumber.wav");
   }
 
-  Expanded buildKeys({Color color , int soundNumber}){
+  Expanded buildKeys({Color color , int soundNumber ,String name}){
    return Expanded(
       child: FlatButton(
-        child: Text("play sound"),
+        child: Text(name),
         color: color,
         onPressed: () {
           playSound(soundNumber);
@@ -32,13 +32,13 @@ class XylophoneApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              buildKeys(color: Colors.pink , soundNumber: 1),
-              buildKeys(color: Colors.blue , soundNumber: 2),
-              buildKeys(color: Colors.lightGreen , soundNumber: 3),
-              buildKeys(color: Colors.deepOrangeAccent , soundNumber: 4),
-              buildKeys(color: Colors.indigo , soundNumber: 5),
-              buildKeys(color: Colors.purple , soundNumber: 6),
-              buildKeys(color: Colors.cyan , soundNumber: 7),
+              buildKeys(color: Colors.pink , soundNumber: 1 ,name: "sound by fele DOH"),
+              buildKeys(color: Colors.blue , soundNumber: 2, name: "sound by fele RE"),
+              buildKeys(color: Colors.lightGreen , soundNumber: 3 , name: "sound by fele MI"),
+              buildKeys(color: Colors.deepOrangeAccent , soundNumber: 4 , name: "sound by fele FAH"),
+              buildKeys(color: Colors.indigo , soundNumber: 5, name: "sound by fele SOH"),
+              buildKeys(color: Colors.purple , soundNumber: 6, name: "sound by fele LAH"),
+              buildKeys(color: Colors.cyan , soundNumber: 7, name: "sound by fele TI"),
           ],)
         ),
       ),
